@@ -23,9 +23,11 @@ jobs:
 
       - name: Установить Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 9.6
 
       - name: Собрать мод
-        run: gradle build
+        run: gradle build --stacktrace
 
       - name: Загрузить готовый JAR
         uses: actions/upload-artifact@v4
