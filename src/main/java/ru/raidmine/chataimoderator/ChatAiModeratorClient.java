@@ -1,6 +1,5 @@
 package ru.raidmine.chataimoderator;
 
-import com.mojang.authlib.GameProfile;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
@@ -23,7 +22,7 @@ public final class ChatAiModeratorClient implements ClientModInitializer {
         HudElementRegistry.addLast(Identifier.of(MOD_ID, "violation_overlay"), OVERLAY::render);
 
         ClientReceiveMessageEvents.CHAT.register((message, signedMessage, sender, params, receptionTimestamp) -> {
-            String playerName = sender == null ? "неизвестно" : sender.getName();
+            String playerName = sender == null ? "неизвестно" : sender.name();
             scanMessage(message, playerName);
         });
 
