@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chat_ai_moderator",
+  "version": "${version}",
+  "name": "Chat AI Moderator",
+  "description": "Client-side Fabric mod: detects suspicious/insulting chat messages and shows a large violation warning on screen.",
+  "authors": ["RaidMine"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.raidmine.chataimoderator.ChatAiModeratorClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
