@@ -21,10 +21,8 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Установить Gradle
+      - name: Подготовить Gradle
         uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: 9.6
 
       - name: Собрать мод
         run: gradle build --stacktrace
