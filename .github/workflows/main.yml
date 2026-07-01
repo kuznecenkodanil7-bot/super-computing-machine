@@ -21,11 +21,11 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Дать права gradlew
-        run: chmod +x ./gradlew
+      - name: Установить Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Собрать мод
-        run: ./gradlew build
+        run: gradle build
 
       - name: Загрузить готовый JAR
         uses: actions/upload-artifact@v4
